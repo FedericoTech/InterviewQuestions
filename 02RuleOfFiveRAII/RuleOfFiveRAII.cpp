@@ -82,7 +82,10 @@ public:
 		attributes = other.attributes;
 		other.attributes = 0;
 
-		std::swap(query, other.query);
+		delete query; //we delete whatever was here
+		query = other.query ? new SearchQuery(*other.query) : nullptr;
+
+		//std::swap(query, other.query); //alternatively
 
 		return *this;
 	}
