@@ -9,6 +9,7 @@ auto f(std::unique_ptr<int> ptr) {
 	return ptr;
 }
 
+//this function accepts the smart pointer by reference
 void g(std::unique_ptr<int> &ptr) {
 	*ptr = 43;
 }
@@ -18,7 +19,7 @@ std::unique_ptr<T> createSPointer(){
 	std::unique_ptr<T> p = std::make_unique<T>();
 	*p = 44;
 
-	//it can be transferred by value
+	//it is transferred by value by being move
 	return p;
 }
 
