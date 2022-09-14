@@ -41,6 +41,7 @@ typedef int* int_p;
 typedef int int_s;
 
 typedef  int * const c_int_p;
+typedef  int const * c_int_p2;
 typedef const int c_int_s;
 
 typedef  int * volatile v_int_p;
@@ -56,6 +57,7 @@ int main()
 	std::cout << "is int_s a pointer? " << (is_pointer<int_s>::value) << std::endl;
 
 	std::cout << "is c_int_p a constant pointer? " << (is_const<c_int_p>::value) << std::endl;
+	std::cout << "is c_int_p2 a constant pointer? " << (is_const<c_int_p2>::value) << std::endl;
 	std::cout << "is c_int_s a constant? " << (is_const<c_int_s>::value) << std::endl;
 
 	std::cout << "is v_int_p a volatile pointer? " << (is_volatile<v_int_p>::value) << std::endl;
