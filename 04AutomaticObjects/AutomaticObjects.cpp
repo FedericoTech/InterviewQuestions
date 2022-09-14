@@ -79,7 +79,7 @@ int main()
 				{
 					dynamic_shared_object1 = dynamic_shared_object2;
 
-					dynamic_shared_object0 = nullptr;
+					dynamic_shared_object0.reset(); //this is like doing = nullptr to a row pointer.
 
 					std::cout << "has dynamic_shared_object2 disappeared? " << (dynamic_shared_object2 == nullptr) << std::endl;
 					std::cout << "has dynamic_shared_object0 disappeared? " << (dynamic_shared_object0 == nullptr) << std::endl;
